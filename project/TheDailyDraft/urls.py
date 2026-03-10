@@ -24,4 +24,5 @@ urlpatterns = [
     path("",views.MyHome, name="home"),
     path("about/",views.About, name="about"),
     path('auth/',include('UserAuth.urls')),
+    path('blogs/',include('BlogDrafts.urls'))
 ]
