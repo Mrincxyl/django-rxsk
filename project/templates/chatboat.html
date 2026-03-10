@@ -1,0 +1,65 @@
+<!-- Chat Button -->
+<button id="chatButton"
+class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center">
+
+  <!-- Chat Icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round"
+    stroke-width="2"
+    d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9
+    8a9.863 9.863 0 01-4-.8L3 20l1.8-3.2A7.963 7.963 0 013
+    12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+  </svg>
+
+</button>
+
+<!-- Chat Box -->
+<div id="chatBox"
+class="hidden fixed bottom-24 right-6 w-80 bg-white rounded-xl shadow-xl border">
+
+  <!-- Header -->
+  <div class="bg-blue-600 text-white p-4 rounded-t-xl flex justify-between items-center">
+    <h3 class="font-semibold">Support</h3>
+    <button id="closeChat">✕</button>
+  </div>
+
+  <!-- Messages -->
+  <div class="p-4 h-64 overflow-y-auto text-sm text-gray-700">
+    <p class="bg-gray-100 p-3 rounded-lg inline-block">
+      👋 Hi there!  
+      <br>
+      How can we help you today?
+    </p>
+  </div>
+
+  <!-- Input -->
+  <div class="border-t p-3 flex gap-2">
+    <input
+      type="text"
+      placeholder="Type your message..."
+      class="flex-1 border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+      Send
+    </button>
+  </div>
+
+</div>
+
+<!-- Script -->
+<script>
+
+const chatButton = document.getElementById("chatButton")
+const chatBox = document.getElementById("chatBox")
+const closeChat = document.getElementById("closeChat")
+
+chatButton.onclick = () => {
+  chatBox.classList.toggle("hidden")
+}
+
+closeChat.onclick = () => {
+  chatBox.classList.add("hidden")
+}
+
+</script>
