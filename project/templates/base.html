@@ -12,8 +12,10 @@
     </title>
 </head>
 <body>
+    
     {% include "nav.html" %}
-  
+    
+    {% include "messages.html" %}
     
     {% block content %}
     {% endblock content %}
@@ -22,4 +24,4 @@
     {% include "footer.html" %}
     <script src="{% static "js/nav.js" %}"></script>
 </body>
-</html>
+</html>    
