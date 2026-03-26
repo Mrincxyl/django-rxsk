@@ -19,7 +19,12 @@ def Login(request):
         if user is not None:
             login(request,user)
             messages.success(request,'Logged in Successfully')
+            
+            next = request.GET.get('next')
+            if next:
+                return redirect(next)   
             return redirect('home')
+        
         else:
             messages.error(request,'Invalid username or password')
             return redirect('login')
@@ -49,3 +54,8 @@ def Register(request):
             return render(request,'login.html')
         
     return render(request,'register.html')
+
+def Logout(request):
+    logout(request)
+    messages.success(request,'Logged out successfully')
+    return redirect('login')
