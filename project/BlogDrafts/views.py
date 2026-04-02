@@ -4,7 +4,6 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
-
 def Drafts(request):
     return render(request,'allblogs.html')
 
