@@ -1,0 +1,85 @@
+<div class="max-w-5xl mx-auto px-6 py-12">
+
+  <!-- Heading -->
+  <div class="text-center mb-10">
+    <h1 class="text-4xl font-bold text-gray-800">
+      Manage Categories
+    </h1>
+    <p class="text-gray-500 mt-2">
+      Create and manage blog categories for The Daily Draft
+    </p>
+  </div>
+
+  <!-- Create Category Form -->
+  <div class="bg-white border border-gray-200 rounded-xl shadow-sm p-8 mb-10">
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <div class="flex gap-4">
+
+        <input 
+          type="text"
+          name="category"
+          placeholder="Enter Category Name..."
+          class="flex-1 py-3 px-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-violet-500"
+        >
+
+        <button
+          type="submit"
+          name="add_category"
+          class="px-6 py-3 text-sm font-semibold rounded-lg bg-violet-600 text-white hover:bg-violet-700 transition"
+        >
+          + Add
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <!-- Category List -->
+  <div class="bg-white border border-gray-200 rounded-xl shadow-sm p-6">
+
+    <h2 class="text-xl font-semibold mb-6 text-gray-700">
+      Existing Categories
+    </h2>
+
+    {% if data %}
+      <div class="space-y-4">
+
+        {% for category in data %}
+        <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 hover:shadow-sm transition">
+
+          <!-- Category Name -->
+          <p class="text-gray-800 font-medium">
+            {{ category.name }}
+          </p>
+
+          <!-- Delete Button -->
+          <form method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="category_id" value="{{ category.id }}">
+            
+            <button 
+              type="submit"
+              name="delete_category"
+              value = {{ category.id }}
+              class="px-4 py-2 text-sm font-medium rounded-lg bg-red-500 text-white hover:bg-red-600 transition"
+            >
+              Delete
+            </button>
+          </form>
+
+        </div>
+        {% endfor %}
+
+      </div>
+    {% else %}
+      <p class="text-gray-500 text-center">No categories created yet.</p>
+    {% endif %}
+
+  </div>
+
+</div>
