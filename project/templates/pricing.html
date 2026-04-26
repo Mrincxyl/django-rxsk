@@ -1,173 +1,138 @@
-{%  extends "base.html"  %}
+{% extends "base.html" %}
 
 {% block title %}
-Pricing
+Pricing | The Daily Draft
 {% endblock title %}
 
-
 {% block content %}
-<!-- Pricing -->
-<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-  <!-- Title -->
-  <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-    <h2 class="text-2xl font-bold md:text-4xl md:leading-tight text-foreground">Find the right plan for your team</h2>
-    <p class="mt-1 text-muted-foreground-2">Pay as you go service, cancel anytime.</p>
-  </div>
-  <!-- End Title -->
 
-  <!-- Grid -->
-  <div class="relative before:absolute before:inset-0 before:-z-1 before:bg-[radial-gradient(closest-side,var(--color-surface-1),transparent)] mt-12">
-    <div class="grid gap-px sm:grid-cols-2 lg:grid-cols-4 lg:items-center">
-      <!-- Card -->
-      <div class="flex flex-col h-full text-center">
-        <div class="bg-card pt-8 pb-5 px-8">
-          <h4 class="font-medium text-lg text-foreground">Free</h4>
-        </div>
+<section class="relative bg-background py-20 lg:py-28 overflow-hidden">
 
-        <div class="h-full bg-card lg:mt-px lg:py-5 px-8">
-          <span class="mt-7 font-bold text-5xl text-foreground">
-            Free
-          </span>
-        </div>
+  <!-- Background Glow -->
+  <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(0,0,0,0.05),transparent_60%)]"></div>
 
-        <div class="bg-card flex justify-center lg:mt-px pt-7 px-8">
-          <ul class="space-y-2.5 text-center text-sm">
-            <li class="text-foreground">
-              1 user
-            </li>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <li class="text-foreground">
-              Plan features
-            </li>
-
-            <li class="text-foreground">
-              Product support
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-card py-8 px-8">
-          <a class="py-3 px-4 w-full inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-primary text-primary hover:border-primary-hover hover:text-primary-hover focus:outline-hidden focus:border-primary-focus focus:text-primary-focus disabled:opacity-50 disabled:pointer-events-none" href="#">
-            Sign up
-          </a>
-        </div>
-      </div>
-      <!-- End Card -->
-
-      <!-- Card -->
-      <div class="flex flex-col h-full text-center">
-        <div class="bg-card pt-8 pb-5 px-8">
-          <h4 class="font-medium text-lg text-foreground">Startup</h4>
-        </div>
-
-        <div class="h-full bg-card lg:mt-px lg:py-5 px-8">
-          <span class="mt-7 font-bold text-5xl text-foreground">
-            <span class="font-bold text-2xl -me-2">$</span>
-            39
-          </span>
-        </div>
-
-        <div class="bg-card flex justify-center lg:mt-px pt-7 px-8">
-          <ul class="space-y-2.5 text-center text-sm">
-            <li class="text-foreground">
-              2 users
-            </li>
-
-            <li class="text-foreground">
-              Plan features
-            </li>
-
-            <li class="text-foreground">
-              Product support
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-card py-8 px-8">
-          <a class="py-3 px-4 w-full inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-primary text-primary hover:border-primary-hover hover:text-primary-hover focus:outline-hidden focus:border-primary-focus focus:text-primary-focus disabled:opacity-50 disabled:pointer-events-none" href="#">
-            Sign up
-          </a>
-        </div>
-      </div>
-      <!-- End Card -->
-
-      <!-- Card -->
-      <div class="flex flex-col h-full text-center">
-        <div class="bg-card pt-8 pb-5 px-8">
-          <h4 class="font-medium text-lg text-foreground">Team</h4>
-        </div>
-
-        <div class="h-full bg-card lg:mt-px lg:py-5 px-8">
-          <span class="mt-7 font-bold text-5xl text-foreground">
-            <span class="font-bold text-2xl -me-2">$</span>
-            89
-          </span>
-        </div>
-
-        <div class="bg-card flex justify-center lg:mt-px pt-7 px-8">
-          <ul class="space-y-2.5 text-center text-sm">
-            <li class="text-foreground">
-              5 users
-            </li>
-
-            <li class="text-foreground">
-              Plan features
-            </li>
-
-            <li class="text-foreground">
-              Product support
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-card py-8 px-8">
-          <a class="py-3 px-4 w-full inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-primary text-primary hover:border-primary-hover hover:text-primary-hover focus:outline-hidden focus:border-primary-focus focus:text-primary-focus disabled:opacity-50 disabled:pointer-events-none" href="#">
-            Sign up
-          </a>
-        </div>
-      </div>
-      <!-- End Card -->
-
-      <!-- Card -->
-      <div class="flex flex-col h-full text-center">
-        <div class="bg-card pt-8 pb-5 px-8">
-          <h4 class="font-medium text-lg text-foreground">Enterprise</h4>
-        </div>
-
-        <div class="h-full bg-card lg:mt-px lg:py-5 px-8">
-          <span class="mt-7 font-bold text-5xl text-foreground">
-            <span class="font-bold text-2xl -me-2">$</span>
-            149
-          </span>
-        </div>
-
-        <div class="bg-card flex justify-center lg:mt-px pt-7 px-8">
-          <ul class="space-y-2.5 text-center text-sm">
-            <li class="text-foreground">
-              10 users
-            </li>
-
-            <li class="text-foreground">
-              Plan features
-            </li>
-
-            <li class="text-foreground">
-              Product support
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-card py-8 px-8">
-          <a class="py-3 px-4 w-full inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-primary text-primary hover:border-primary-hover hover:text-primary-hover focus:outline-hidden focus:border-primary-focus focus:text-primary-focus disabled:opacity-50 disabled:pointer-events-none" href="#">
-            Sign up
-          </a>
-        </div>
-      </div>
-      <!-- End Card -->
+    <!-- Header -->
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-foreground">
+        Simple, transparent pricing
+      </h1>
+      <p class="mt-5 text-lg text-muted-foreground-2">
+        Scale your content platform with flexible plans designed for creators, teams, and enterprises.
+      </p>
     </div>
+
+    <!-- Pricing Grid -->
+    <div class="grid gap-8 lg:grid-cols-3 items-stretch">
+
+      <!-- Starter -->
+      <div class="flex flex-col rounded-3xl border border-card-line bg-card p-8 shadow-sm hover:shadow-lg transition">
+
+        <h3 class="text-lg font-semibold text-foreground">Starter</h3>
+        <p class="mt-2 text-sm text-muted-foreground-2">
+          Perfect for individuals starting their journey.
+        </p>
+
+        <div class="mt-6">
+          <span class="text-5xl font-bold text-foreground">Free</span>
+        </div>
+
+        <ul class="mt-8 space-y-4 text-sm text-muted-foreground-2">
+          <li>✔ 1 user</li>
+          <li>✔ Basic blog publishing</li>
+          <li>✔ Public visibility</li>
+          <li>✔ Community support</li>
+        </ul>
+
+        <div class="mt-auto pt-10">
+          <a href="#"
+             class="w-full inline-flex justify-center items-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white hover:bg-gray-800 transition">
+            Start for Free
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Pro (Highlighted) -->
+      <div class="relative flex flex-col rounded-3xl bg-gradient-to-b from-primary to-primary-focus p-[1px] shadow-xl">
+
+        <div class="flex flex-col h-full rounded-3xl bg-card p-8">
+
+          <!-- Badge -->
+          <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-semibold px-4 py-1 rounded-full shadow">
+            Most Popular
+          </span>
+
+          <h3 class="text-lg font-semibold text-foreground">Pro</h3>
+          <p class="mt-2 text-sm text-muted-foreground-2">
+            For serious creators and growing platforms.
+          </p>
+
+          <div class="mt-6">
+            <span class="text-5xl font-bold text-foreground">$49</span>
+            <span class="text-sm text-muted-foreground-2">/month</span>
+          </div>
+
+          <ul class="mt-8 space-y-4 text-sm text-muted-foreground-2">
+            <li>✔ Up to 5 users</li>
+            <li>✔ Unlimited blogs</li>
+            <li>✔ Private & public posts</li>
+            <li>✔ Advanced dashboard</li>
+            <li>✔ Priority support</li>
+          </ul>
+
+          <div class="mt-auto pt-10">
+            <a href="#"
+               class="w-full inline-flex justify-center items-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white hover:bg-gray-800 transition">
+              Upgrade to Pro
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="flex flex-col rounded-3xl border border-card-line bg-card p-8 shadow-sm hover:shadow-lg transition">
+
+        <h3 class="text-lg font-semibold text-foreground">Enterprise</h3>
+        <p class="mt-2 text-sm text-muted-foreground-2">
+          Built for large teams and organizations.
+        </p>
+
+        <div class="mt-6">
+          <span class="text-5xl font-bold text-foreground">$149</span>
+          <span class="text-sm text-muted-foreground-2">/month</span>
+        </div>
+
+        <ul class="mt-8 space-y-4 text-sm text-muted-foreground-2">
+          <li>✔ 10+ users</li>
+          <li>✔ Role-based access</li>
+          <li>✔ Analytics integration</li>
+          <li>✔ Custom workflows</li>
+          <li>✔ Dedicated support</li>
+        </ul>
+
+        <div class="mt-auto pt-10">
+          <a href="#"
+             class="w-full inline-flex justify-center items-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white hover:bg-gray-800 transition">
+            Contact Sales
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Footer Note -->
+    <div class="text-center mt-16">
+      <p class="text-sm text-muted-foreground-2">
+        No hidden fees. Cancel anytime. Upgrade or downgrade as needed.
+      </p>
+    </div>
+
   </div>
-  <!-- End Grid -->
-</div>
-<!-- End Pricing -->
+
+</section>
 
 {% endblock content %}

@@ -93,3 +93,20 @@ def Create(request):
             return redirect('create')
              
     return render(request,'create.html',{'data':categories})
+
+
+
+
+
+@login_required(login_url='login')
+def  BlogDetail(request,slug_value):
+    try:
+        blogs = Blog.objects.get(slug=slug_value)
+        if blogs.visibility == 'private' and blogs.author != request.user:
+            messages.error(request,"You don't have permission to view this blog.")
+            return redirect('Blogs')
+        return render(request,'blog_detail.html',{'blog':blogs})
+    except Blog.DoesNotExist:
+        messages.error(request,"Blog not found")
+        return redirect('Blogs')
+         

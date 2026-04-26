@@ -63,7 +63,7 @@ Blog | The Daily Draft
       <!-- Actions -->
       <div class="mt-auto flex border-t border-line-2 divide-x divide-line-2">
         <a 
-          href="#"
+          href = "{% url "blog_detail" blog.slug %}"
           class="w-full py-3 px-4 text-center text-sm font-medium bg-layer text-foreground hover:bg-muted-hover"
         >
           Read More
